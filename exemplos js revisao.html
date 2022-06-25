@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.escuro{
+	background-color: #000;
+    color: #fff;
+}
+
+.claro{
+	background-color: #fff;
+    color: #000;
+}
+</style>
+
+<script>
+
+//3 tipos de variaveis
+
+//var podem ser utilizadas mesmo antes de sua declaração
+var a = "Ola";
+
+//let só podem ser utilizadas após sua declaração, porque elas não são inicializadas
+let b = "Ednaldo Pereira";
+
+//uma constante não altera o valor dela
+const msg = "Bom dia Ednaldo Pereira";
+
+//console.log mostra uma mensagem no console do navegador
+console.log("Ola mundo");
+console.log(a,b);
+
+//função em javascript para mostrar uma mensagem na tela através do innerHtml
+function mensagem(){
+	document.getElementById('msg').innerHTML = msg;
+}
+//função em javascript para mudar as cores da pagina
+function claro(){
+	document.getElementById("body").className = "claro";
+}
+//função em javascript para mudar as cores da pagina
+function escuro(){
+	document.getElementById("body").className = "escuro";
+}
+</script>
+
+<body id="body">
+<h1>Exemplos de javascript</h1>
+
+<p>Mude o tema:</p>
+<!--Um botão com onclick ativar uma função js que muda as cores da pagina-->
+<button type="button" onclick="escuro()">Escuro</button>
+<!--Um botão com onclick ativar uma função js que muda as cores da pagina-->
+<button type="button" onclick="claro()">Claro</button>
+
+<br><br>
+
+<!--Um botão com onclick ativar uma função js-->
+<button type="button" onclick="mensagem()">Clique aqui</button>
+<!--tag html que receberá a mensagem -->
+<p id="msg"></p>
+</body>
+</html>
